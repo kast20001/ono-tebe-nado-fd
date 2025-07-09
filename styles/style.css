@@ -10,33 +10,52 @@ body {
 .header {
   display: grid;
   margin: 0 auto;
-  text-align: center;
-  grid-template-columns: 1fr min-content 1fr;
+  padding: 92px, 50px;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   max-width: 1100px;
-  max-height: 293px;
   background-color: white;
   color: black;
   align-items: center;
   justify-items: center;
   padding: auto;
+  font-size: 18px;
 }
-.header-img {
-  height: 105px;
-  width: 148px;
+
+.header-logo {
   justify-self: center;
 }
 
-.header-nav {
+.header-img {
+  height: 105px;
+  width: 148px;
+}
+
+.nav-list {
   display: flex;
-  flex-direction: row;
+  gap: 32px;
+}
+
+.nav-line {
+  text-decoration: none;
+  color:black;
+  list-style: none;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link-active {
+  border-bottom: 1px solid black;
+}
+
+.header-nav {
   justify-self: start;
-  color: black;
+}
+
+.box-address{
+  padding: 95px, 50px, 95px, 810px;
 }
 
 .header-address {
-  display: flex;
   justify-self: end;
   text-align: right;
-  flex-direction: column;
 }
