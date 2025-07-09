@@ -1,1 +1,45 @@
 /* место для вашего кода */
+body {
+  font-family: Raleway, sans-serif;
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  max-width: auto;
+  max-height: 293px;
+  background-color: white;
+  color:black;
+  align-items: center;
+  justify-items: center;
+
+}
+.header img {
+  padding: 92px 478px;
+  height: 105px;
+  width: 148px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color:black;
+  width: 391.4786376953125;
+  height: 22.00001335144043;
+  opacity: 1;
+  padding-top: 133px;
+  padding-left: 50px;
+
+}
+
+.header address {
+  display: flex;
+  flex-direction: column;
+  padding-left: 240px;
+  padding-top: 98px;
+}
