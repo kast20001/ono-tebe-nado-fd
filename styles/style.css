@@ -3,43 +3,40 @@ body {
   font-family: Raleway, sans-serif;
   background-color: rgb(245, 245, 245);
   color: black;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  margin: 0 auto;
+  text-align: center;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  max-width: auto;
+  max-width: 1100px;
   max-height: 293px;
   background-color: white;
-  color:black;
+  color: black;
   align-items: center;
   justify-items: center;
-
+  padding: auto;
 }
-.header img {
-  padding: 92px 478px;
+.header-img {
   height: 105px;
   width: 148px;
+  justify-self: center;
 }
 
-nav {
+.header-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color:black;
-  width: 391.4786376953125;
-  height: 22.00001335144043;
-  opacity: 1;
-  padding-top: 133px;
-  padding-left: 50px;
-
+  justify-self: start;
+  color: black;
 }
 
-.header address {
+.header-address {
   display: flex;
+  justify-self: end;
+  text-align: right;
   flex-direction: column;
-  padding-left: 240px;
-  padding-top: 98px;
 }
