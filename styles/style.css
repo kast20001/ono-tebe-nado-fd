@@ -1,6 +1,6 @@
 /* место для вашего кода */
 body {
-  font-family: "Raleway", sans-serif; /* закидываем скачанный шрифт, задаем фон и цвет текста*/
+  font-family: "Raleway", sans-serif; /* закидываем скачанный шрифт, задаем фон и цвет текста во всем теле */
   background-color: rgb(245, 245, 245);
   color: black;
   margin: 0;
@@ -62,15 +62,13 @@ body {
   width: 148px;
 }
 
-.box-address {
-  /*редактируем паддинги */
-  padding: 95px, 50px, 95px, 810px;
-}
-
 .header-address {
   /*задаем положение адрессам*/
-  justify-self: end;
-  text-align: right;
+  grid-column: 3; /* помещаем в третью колонку */
+  justify-self: end; /* выравниваем по правому краю */
+  text-align: right; /* выравниваем текст по правому краю */
+  padding-right: 50px; /* отступ справа */
+
 }
 .address-link {
   white-space: nowrap;
@@ -78,6 +76,9 @@ body {
 .no-deco {
   /* для строк, в которых не нужны точки и прочие метки*/
   list-style-type: none;
+  padding: 0; /* убираем стандартные отступы */
+  margin: 0;
+  line-height: 1.35; /* межстрочный интервал */
 }
 
 .cover::before {
@@ -88,12 +89,7 @@ body {
   left: 0; /* прижимаем элемент к родительскому */
   height: 100%; /* высота растянута  */
   width: 100%; /* ширина растянута */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* полупрозрачный черный фон в 60%(см. фигму) */
+  background-color: rgba(0, 0, 0, 0.6); /* полупрозрачный черный фон в 60%(см. фигму) */
   z-index: 1; /* помещаем элемент ниже текста, чтобы он тоже не затемнялся */
 }
 
@@ -114,29 +110,30 @@ body {
 
 .cover-title {
   font-size: 100px;
+  letter-spacing: 0.3em; /* расстояние между буквами */
+  font-weight: 700;
   line-height: 115px;
   padding-left: 50px;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
-  text-align: center;
   margin: 0;
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
-.cover-title-align {
-  display: block;
+.cover-title-align { /* класс для выравнивания заголовка */
+  display: block; 
 }
 
-.cover-title-align-start {
+.cover-title-align-start { /* в начало */
   text-align: start;
 }
 
-.cover-title-align-center {
+.cover-title-align-center { /* по центру */
   text-align: center;
 }
 
-.cover-title-align-end {
+.cover-title-align-end { /* в конец */
   text-align: end;
 }
 
@@ -151,15 +148,20 @@ body {
   padding: 50px;
   font-size: 22px;
   line-height: 28px;
-  letter-spacing: 90%;
+  font-weight: 400;
+  word-spacing: 0.9em; /* размер пробелов */
   color: white; 
-  text-align: center;
   text-transform: uppercase;
+  white-space: nowrap; /* чтобы текст не переносился */
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
 .button-bet {
+  padding-right: 50px; /* отступ справа */
+  width: 100%;
+  position: relative;
   background: transparent; /* прозрачный фон */
+  text-decoration: none; /* убираем подчеркивание */
   border: 1px solid white; /* белая рамка */
   color: white; /* белый цвет текста */
   font-size: 22px; /* размер шрифта */
@@ -168,4 +170,29 @@ body {
   cursor: pointer;
   text-align: end;
   z-index: 2; /* помещаем кнопку поверх псевдоэлемента */
+}
+
+.lots {
+  /* стили для лотов */
+  max-width: 1052px; /* задаем максимальную ширину */
+  margin: 0 auto; /* выравниваем по центру */
+  padding: 0; /* убираем отступы */
+}
+.lots-item {
+  /* стили для лотов */
+  display: grid; /* делаем элемент грид-контейнером */
+  grid-template-columns: repeat(3, minmax(334px, 1fr)); /* колонки с минимальной шириной 334px(см. фигму) */
+  gap: 24px; /* расстояние между лотами(допустим, столько же, сколько в макете(проверить!!!)) */
+  padding: 24px; /* отступы вокруг лотов */
+}
+
+.lots-title {
+  padding-left: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lots-item-img {
+  max-width: 334px;
 }
