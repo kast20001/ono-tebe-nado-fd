@@ -1,19 +1,20 @@
 /* место для вашего кода */
 body {
-  font-family: Raleway, sans-serif; /* закидываем скачанный шрифт, задаем фон и цвет текста*/
+  font-family: "Raleway", sans-serif; /* закидываем скачанный шрифт, задаем фон и цвет текста*/
   background-color: rgb(245, 245, 245);
   color: black;
   margin: 0;
   padding: 0;
 }
 
-.header { /* оформляем грид, положение объектов в нем и размер шрифта */
+.header {
+  /* оформляем грид, положение объектов в нем и размер шрифта */
   display: grid;
   margin: 0 auto;
   padding: 92px, 50px;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1100px; /* задаем максимальную ширину */
   background-color: white;
   color: black;
   align-items: center;
@@ -22,84 +23,149 @@ body {
   font-size: 18px;
 }
 
-.header-logo { /*задаем положение логотипа*/
-  justify-self: center;
-}
-
-.header-img { /* размеры картинки с шаблона*/
-  height: 105px;
-  width: 148px;
-}
-
-.header-nav {  /*задаем положение для навигации*/
+.header-nav {
+  /*задаем положение для навигации*/
   justify-self: start;
 }
 
-.nav-list { /*список для навигации*/
+.nav-list {
+  /*список для навигации*/
   list-style: none;
-  padding: 0;
+  padding-left: 50px;
   margin: 0;
-  display: flex;
+  display: flex; /* делаем элемент flex-контейнером */
   gap: 32px;
-  white-space: nowrap;
+  white-space: nowrap; /* все элементы в одну строку */
 }
 
-.nav-line { /*строка без декора*/
+.nav-line {
+  /*строка без декора*/
   text-decoration: none;
-  color:black;
+  color: black;
   list-style: none;
 }
 
-.nav-link-active {  /*псевдо-активная ссылка */
+.nav-link-active {
+  /*псевдо-активная ссылка */
   border-bottom: 1px solid black;
 }
 
 
-.box-address{ /*редактируем паддинги */
+.header-logo {
+  /*задаем положение логотипа*/
+  justify-self: center;
+}
+
+.header-img {
+  /* размеры картинки с шаблона*/
+  height: 105px;
+  width: 148px;
+}
+
+.box-address {
+  /*редактируем паддинги */
   padding: 95px, 50px, 95px, 810px;
 }
 
-.header-address { /*задаем положение адрессам*/
+.header-address {
+  /*задаем положение адрессам*/
   justify-self: end;
   text-align: right;
 }
 .address-link {
   white-space: nowrap;
 }
-.no-deco {  /* для строк, в которых не нужны точки и прочие метки*/
+.no-deco {
+  /* для строк, в которых не нужны точки и прочие метки*/
   list-style-type: none;
 }
 
+.cover::before {
+  /*этот класс дался с ОЧЕНЬ большой болью*/
+  content: "";
+  position: absolute;
+  top: 0; /* прижимаем элемент к родительскому */
+  left: 0; /* прижимаем элемент к родительскому */
+  height: 100%; /* высота растянута  */
+  width: 100%; /* ширина растянута */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* полупрозрачный черный фон в 60%(см. фигму) */
+  z-index: 1; /* помещаем элемент ниже текста, чтобы он тоже не затемнялся */
+}
+
 .cover {
-   max-width: 1100px;
-   margin: 0 auto;
-   padding-top: 293px;
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   min-height: auto;
-   background-size: cover;
-   background-image: url(../images/cover.jpg);
-   background-repeat: no-repeat;
-   box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 293px;
+  position: relative;
+  display: flex; /* делаем элемент flex-контейнером */
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: auto;
+  background-size: cover; /* пусть картинка покрывает все пространство */
+  background-image: url(../images/cover.jpg); /* задаем картинку для cover */
+  background-repeat: no-repeat; /* не повторяем картинку */
+  box-sizing: border-box; /* чтобы паддинги не влияли на размер элемента */
 }
 
 .cover-title {
   font-size: 100px;
   line-height: 115px;
-  padding-top: 165px;
   padding-left: 50px;
   font-weight: bold;
+  text-transform: uppercase;
   color: white;
   text-align: center;
   margin: 0;
+  z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
-.cover-description {
-  font-size: 22px;
-  line-height: 28px;
-  color: white;
+.cover-title-align {
+  display: block;
+}
+
+.cover-title-align-start {
+  text-align: start;
+}
+
+.cover-title-align-center {
   text-align: center;
 }
 
+.cover-title-align-end {
+  text-align: end;
+}
+
+.cover-one-row {
+  display: flex; /* делаем элемент flex-контейнером */
+  flex-direction: row; /* выстраиваем элементы в строку */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover-description {
+  padding: 50px;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 90%;
+  color: white; 
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 2; /* помещаем текст поверх псевдоэлемента */
+}
+
+.button-bet {
+  background: transparent; /* прозрачный фон */
+  border: 1px solid white; /* белая рамка */
+  color: white; /* белый цвет текста */
+  font-size: 22px; /* размер шрифта */
+  text-transform: uppercase;
+  line-height: 100%;
+  cursor: pointer;
+  text-align: end;
+  z-index: 2; /* помещаем кнопку поверх псевдоэлемента */
+}
