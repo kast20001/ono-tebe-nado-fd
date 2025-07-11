@@ -178,7 +178,7 @@ body {
   margin: 0 auto; /* выравниваем по центру */
   padding: 0; /* убираем отступы */
 }
-.lots-item {
+.lots-list {
   /* стили для лотов */
   display: grid; /* делаем элемент грид-контейнером */
   grid-template-columns: repeat(3, minmax(334px, 1fr)); /* колонки с минимальной шириной 334px(см. фигму) */
