@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+a {
+  color: black;
+}
+
 .header {
   /* оформляем грид, положение объектов в нем и размер шрифта */
   display: grid;
@@ -210,4 +214,67 @@ body {
 
 .lots-item-img {
   max-width: 334px;
+}
+
+.about {
+  max-width: 1052px; /* задаем максимальную ширину */
+  margin: 0 auto; /* выравниваем по центру */
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* две колонки */
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: white;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.background-logo {
+  background-color: black;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%; /* делаем круг */
+  display: flex;
+  justify-content: center; /* выравниваем по центру */
+  align-items: center; /* выравниваем по центру */
+}
+
+.white-logo {
+  margin: auto; /* выравниваем по центру */
+  max-width: 148px;
+}
+
+.about-title {
+  font-size: 40px;
+  line-height: 31px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  max-width: 1100px; /* задаем максимальную ширину */
+  margin: 0 auto; /* выравниваем по центру */
+  background-color: white;
+  color: black;
+  display: flex; /* делаем элемент flex-контейнером */
+  flex-direction: row; /* выстраиваем элементы в столбик */
+  align-items: center; /* выравниваем по центру */
+}
+
+.footer-address {
+  /* стили для адреса в футере */
+  padding-left: 50px; /* отступ слева */
+}
+.footer-nav {
+  /* стили для навигации в футере */
+  display: flex; /* делаем элемент flex-контейнером */
+  flex-direction: column; /* выстраиваем элементы в столбик */
+  text-align: center;
+  align-items: center;
 }
