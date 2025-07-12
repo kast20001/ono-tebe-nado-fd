@@ -11,6 +11,10 @@ a {
   color: black;
 }
 
+article {
+  height: 100%;
+}
+
 .header {
   /* оформляем грид, положение объектов в нем и размер шрифта */
   display: grid;
@@ -23,7 +27,7 @@ a {
   color: black;
   padding: auto;
   font-size: 18px;
-  line-height: 18px;;
+  line-height: 18px;
 }
 
 .header-nav {
@@ -38,14 +42,11 @@ a {
   padding-left: 50px;
   margin: 0;
   display: flex; /* делаем элемент flex-контейнером */
-  gap: 32px;
+  gap: 42px;
   white-space: nowrap; /* все элементы в одну строку */
 }
 
-.nav-line {
-  /*строка без декора*/
-  text-decoration: none;
-  color: black;
+.nav-non-active-link {
   list-style: none;
 }
 
@@ -53,6 +54,13 @@ a {
   /*псевдо-активная ссылка */
   border-bottom: 1px solid black;
   list-style-type: circle;
+}
+
+.bigger-font-size-link {
+  /* ссылка с увеличенным шрифтом */
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;;
 }
 
 .header-logo {
@@ -213,7 +221,17 @@ a {
   padding-left: 24px; /* отступ слева */
   padding-right: 24px;
   background-color: white;
+  padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
+  h1,
+  h2,
+  h3,
+  p {
+    /* стили для заголовков и параграфов снова сбрасываем(непонятно почему, но работает толлько так)*/
+    margin: 0;
+    padding: 0;
+  }
 }
+
 .lots-list {
   /* стили для лотов */
   display: grid; /* делаем элемент грид-контейнером */
@@ -225,9 +243,28 @@ a {
   padding: 24px; /* отступы вокруг лотов */
 }
 
-.lots-item {
-  display: flex;
-  flex-direction: column;
+.lots-item-cinema {
+  background-image: url(../images/card-lot-01.jpg);
+  height: 596px; /* высота лота */
+  background-size: cover; /* картинка должна покрывать весь элемент */
+  background-position: center;
+  background-repeat: no-repeat; /* не повторяем картинку */
+}
+
+.lots-item-book {
+  background-image: url(../images/card-lot-02.jpg);
+  height: 596px; /* высота лота */
+  background-size: cover; /* картинка должна покрывать весь элемент */
+  background-repeat: no-repeat; /* не повторяем картинку */
+  background-position: center;
+}
+
+.lots-item-painting {
+  background-image: url(../images/card-lot-03.jpg);
+  height: 596px; /* высота лота */
+  background-size: cover; /* картинка должна покрывать весь элемент */
+  background-repeat: no-repeat; /* не повторяем картинку */
+  background-position: center;
 }
 
 .lots-title {
@@ -235,10 +272,25 @@ a {
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
+  z-index: 2; /* помещаем текст поверх псевдоэлемента */
+}
+
+.lots-description-h {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.lots-description-text {
+  z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
 .lots-item-img {
   max-width: 334px;
+  background-position: center;
 }
 
 .about {
@@ -248,6 +300,7 @@ a {
   grid-template-columns: 1fr 2fr; /* две колонки */
   padding-left: 24px;
   padding-right: 24px;
+  padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   background-color: white;
   font-size: 20px;
   line-height: 24px;
@@ -277,18 +330,24 @@ a {
 }
 
 .about-text {
+  padding-top: 150px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .footer {
+  padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   max-width: 1100px; /* задаем максимальную ширину */
+  min-height: 180px;
   margin: 0 auto; /* выравниваем по центру */
   background-color: white;
   color: black;
-  display: flex; /* делаем элемент flex-контейнером */
-  flex-direction: row; /* выстраиваем элементы в столбик */
+  display: grid; /* делаем элемент грид-контейнером */
+  grid-template-columns: 1fr 1fr 1fr; /* три колонки */
   align-items: center; /* выравниваем по центру */
 }
 
@@ -296,10 +355,21 @@ a {
   /* стили для адреса в футере */
   padding-left: 50px; /* отступ слева */
 }
+
 .footer-nav {
   /* стили для навигации в футере */
   display: flex; /* делаем элемент flex-контейнером */
   flex-direction: column; /* выстраиваем элементы в столбик */
   text-align: center;
   align-items: center;
+}
+
+.socials {
+  /* стили для социальных сетей */
+  display: grid; /* делаем элемент грид-контейнером */
+  grid-template-columns: repeat(3, 1fr); /* три колонки */
+}
+
+.socials-img {
+  max-width: 48px;
 }

@@ -18,10 +18,15 @@
       <nav class="header-nav">
         <!-- навигация по сайту -->
         <ul class="nav-list">
-          <li class="nav-line"><a class="link-black" href="/">главная</a></li>
-          <li class="nav-link-active"><a class="link-black" href="/lots">посмотреть лоты</a></li>
-          <!-- псевдо-ссылки навигации-->
-          <li class="nav-link-active"><a class="link-black" href="/about">об аукционе</a></li>
+          <li class="nav-non-active-link">
+            <a class="link-black" href="/">главная</a>
+          </li>
+          <li class="nav-link-active">
+            <a class="link-black" href="/lots">посмотреть лоты</a>
+          </li>
+          <li class="nav-link-active">
+            <a class="link-black" href="/about">об аукционе</a>
+          </li>
         </ul>
       </nav>
 
@@ -30,9 +35,9 @@
         <a class="logo-link" href="#0">
           <img
             class="header-img"
-              src="./images/logo-black.svg"
-              alt="Логотип аукциона Оно тебе надо"
-            />
+            src="./images/logo-black.svg"
+            alt="Логотип аукциона Оно тебе надо"
+          />
         </a>
       </div>
 
@@ -74,19 +79,21 @@
 
         <div class="lots-list">
           <!-- статья один -->
-          <article class="lots-item">
-            <h3>Фильм режиссёра, который бросил киношколу</h3>
-            <p class="lot-description-1">
+          <article class="lots-item-cinema">
+            <h3 class="lots-description-h">
+              Фильм режиссёра, который бросил киношколу
+            </h3>
+            <p class="lots-description">
               Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
               ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
             </p>
           </article>
           <!-- статья два -->
-          <article class="lots-item">
-            <h3>
+          <article class="lots-item-book">
+            <h3 class="lots-description-h">
               Книга, где описан один скучный день из жизни рекламного агента
             </h3>
-            <p class="lot-description-2">
+            <p class="lots-description">
               Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
               переходами на древнеанглийский. В ней одновременно рассказывается
               о 16 июня 1904 года и об истории литературы, начиная с античных
@@ -95,17 +102,21 @@
             </p>
           </article>
           <!-- статья три -->
-          <article class="lots-item">
-            <h3>Картина, которую повторит даже 5-летний сын маминой подруги</h3>
-            <p class="lot-description-3">
+          <article class="lots-item-painting">
+            <h3 class="lots-description-h">
+              Картина, которую повторит даже 5-летний сын маминой подруги
+            </h3>
+            <p class="lots-description">
               Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то
               похожее на инфузорию-туфельку. Никаких полей, лесов, котиков...
               Сколько бы вы на такое поставили, если бы не знали, что это — одна
               из революционных работ Кандинского?
             </p>
           </article>
+          <a class="bigger-font-size-link" href="#0">посмотреть больше</a>
         </div>
       </section>
+
       <div class="about">
         <div class="background-logo">
           <img
@@ -153,17 +164,26 @@
       <nav class="footer-nav">
         <!-- навигация по сайту -->
         <ul class="no-deco">
-          <li class="nav-line"><a href="/">главная</a></li>
-          <li class="nav-link-active"><a href="/lots">посмотреть лоты</a></li>
-          <!-- псевдо-ссылки навигации-->
-          <li class="nav-link-active"><a href="/about">об аукционе</a></li>
+          <li class="nav-non-active-link">
+            <a class="link-black" href="/">главная</a>
+          </li>
+          <li><a href="/lots">посмотреть лоты</a></li>
+          <li><a href="/about">об аукционе</a></li>
         </ul>
       </nav>
 
       <div class="socials">
-        <!-- социальные сети -->
+        <img class="socials-img"
+          src="./images/yt.svg" 
+          alt="иконка YouTube" />
+        <img class="socials-img"
+          src="./images/vk.svg"
+          alt="иконка ВКонтакте" />
+        <img class="socials-img"
+          src="./images/pinterest.svg"
+          alt="иконка Pinterest"
+        />
       </div>
-
     </footer>
     <!-- подвал сайта -->
   </body>
