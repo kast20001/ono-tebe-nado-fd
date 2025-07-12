@@ -52,6 +52,7 @@ a {
 .nav-link-active {
   /*псевдо-активная ссылка */
   border-bottom: 1px solid black;
+  list-style-type: circle;
 }
 
 
@@ -161,6 +162,11 @@ a {
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
+.link-white {
+  color: white;
+  text-decoration: none; /* убираем подчеркивание */
+}
+
 .button-bet { /*ДА КАК ЕЕ СДЕЛАТЬ ОНА ЕДЕТ ПОСТОЯННО КРИК ДУШИ ПРОСТО */
   margin: 0 auto;
   padding: 0;
@@ -172,12 +178,10 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-decoration: none; /* убираем подчеркивание */
   border: 1px solid white; /* белая рамка */
   color: white; /* белый цвет текста */
   font-size: 22px; /* размер шрифта */
   text-transform: uppercase;
-  text-decoration: none; /* убираем подчеркивание */
   line-height: 100%;
   cursor: pointer;
   position: relative;
