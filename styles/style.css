@@ -1,10 +1,21 @@
 /* место для вашего кода */
+h1,
+h2,
+h3,
+p {
+    /* стили для заголовков и параграфов снова сбрасываем(непонятно почему, но работает толлько так)*/
+  margin: 0;
+  padding: 0;
+}  
+
 body {
   font-family: "Raleway", sans-serif; /* закидываем скачанный шрифт, задаем фон и цвет текста во всем теле */
   background-color: rgb(245, 245, 245);
   color: black;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 1100px;
+
 }
 
 a {
@@ -136,7 +147,6 @@ article {
   font-weight: 700;
   line-height: 115px;
   padding-left: 50px;
-  font-weight: bold;
   text-transform: uppercase;
   color: white;
   margin: 0;
@@ -222,14 +232,6 @@ article {
   padding-right: 24px;
   background-color: white;
   padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
-  h1,
-  h2,
-  h3,
-  p {
-    /* стили для заголовков и параграфов снова сбрасываем(непонятно почему, но работает толлько так)*/
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .lots-list {
