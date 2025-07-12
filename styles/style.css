@@ -23,6 +23,7 @@ article {
   align-items: center;
   justify-items: center;
   max-width: 1100px; /* задаем максимальную ширину */
+  min-height: 293px;
   background-color: white;
   font-size: 18px;
   line-height: 18px;
@@ -39,7 +40,7 @@ article {
   padding-left: 50px;
   margin: 0;
   display: flex; /* делаем элемент flex-контейнером */
-  gap: 42px;
+  gap: 24px;
   white-space: nowrap; /* все элементы в одну строку */
 }
 
@@ -106,13 +107,12 @@ article {
 
 .cover {
   max-width: 1100px;
+  min-height: 757px;
   margin: 0 auto;
-  padding-top: 293px;
   position: relative;
   display: flex; /* делаем элемент flex-контейнером */
   flex-direction: column;
   justify-content: space-between;
-  min-height: auto;
   background-size: cover; /* пусть картинка покрывает все пространство */
   background-image: url(../images/cover.jpg); /* задаем картинку для cover */
   background-repeat: no-repeat; /* не повторяем картинку */
@@ -120,15 +120,20 @@ article {
   background-color: white;
 }
 
+.cover-box {
+  padding-top: 165px;
+  padding-left: 50px;
+  padding-right: 50px;
+  z-index: 2;
+}
+
 .cover-title {
   font-size: 100px;
   letter-spacing: 0.3em; /* расстояние между буквами */
   font-weight: 700;
   line-height: 115px;
-  padding-left: 50px;
   text-transform: uppercase;
   color: white;
-  margin: 0;
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
@@ -205,9 +210,7 @@ article {
 
 .lots {
   /* стили для лотов */
-  margin: 0 auto; /* выравниваем по центру */
-  padding-left: 24px; /* отступ слева */
-  padding-right: 24px;
+  padding-top: 400px 24px;
   background-color: white;
   padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   z-index: 1;
@@ -221,7 +224,7 @@ article {
     minmax(334px, 1fr)
   ); /* колонки с минимальной шириной 334px(см. фигму) */
   max-width: 1052px;
-  gap: 24px; /* расстояние между лотами(допустим, столько же, сколько в макете(проверить!!!)) */
+  gap: 30px; /* расстояние между лотами(допустим, столько же, сколько в макете(проверить!!!)) */
   padding: 24px; /* отступы вокруг лотов */
 }
 
@@ -289,6 +292,7 @@ article {
 }
 
 .lots-title {
+  padding-top: 200px;
   padding-left: 40px;
   font-size: 40px;
   font-weight: bold;
@@ -332,7 +336,7 @@ article {
   grid-template-columns: 1fr 2fr; /* две колонки с разными габаритами*/
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
+  padding-top: 200px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   background-color: white;
   font-size: 20px;
   line-height: 24px;
@@ -376,7 +380,7 @@ article {
   padding-top: 20px; /* примерный отступ, сравнить в пискельперфект */
 }
 .footer {
-  padding-top: 80px; /* отступ сверху визуально(найти актуальное значение через проверку) */
+  padding-top: 180px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   max-width: 1100px; /* задаем максимальную ширину */
   min-height: 180px;
   margin: 0 auto; /* выравниваем по центру */
