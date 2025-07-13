@@ -39,7 +39,7 @@ article {
   padding-left: 50px;
   margin: 0;
   display: flex; /* делаем элемент flex-контейнером */
-  gap: 24px;
+  gap: 32px;
   white-space: nowrap; /* все элементы в одну строку */
 }
 
@@ -72,11 +72,21 @@ article {
 
 .header-address {
   /*задаем положение адрессам*/
+  padding-left: 70px;
   font-size: 18px;
-  display: flex;
+  font-style: normal;
+  display: block;
   align-items: flex-start;
   max-width: 240px;
-  line-height: 23px;
+  line-height: 24px;
+}
+
+.address-phone {
+  text-underline-offset: 4px;
+}
+
+.address-address {
+  white-space: pre;
 }
 
 .no-deco {
@@ -84,8 +94,9 @@ article {
   list-style-type: none;
   padding: 0; /* убираем стандартные отступы */
   margin: 0 auto;
-  line-height: 1.35; /* межстрочный интервал */
+
 }
+
 
 .cover::before {
   /*этот класс дался с ОЧЕНЬ большой болью*/
@@ -220,7 +231,6 @@ article {
 
 .lots {
   /* стили для лотов */
-  padding-top: 400px 24px;
   background-color: white;
   z-index: 1;
 }
@@ -301,8 +311,8 @@ article {
 }
 
 .lots-title {
-  padding-top: 200px;
-  padding-left: 40px;
+  padding-top: 185px;
+  padding-left: 65px;
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
@@ -332,6 +342,11 @@ article {
   padding-right: 40px;
   padding-bottom: 48px;
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
+}
+
+.lots-link {
+  padding-top: 5px;
+  padding-left: 40px;
 }
 
 .lots-item-img {
@@ -390,6 +405,7 @@ article {
 }
 .footer {
   padding-top: 180px; /* отступ сверху визуально(найти актуальное значение через проверку) */
+  padding-bottom: 100px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   max-width: 1100px; /* задаем максимальную ширину */
   min-height: 180px;
   margin: 0 auto; /* выравниваем по центру */
