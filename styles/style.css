@@ -186,11 +186,12 @@ article {
 }
 
 .cover-description {
-  padding: 50px;
+  padding: 60px; /*было 50, эксперементальное значние*/
+  padding-left: 40px;
   font-size: 22px;
   line-height: 28px;
   font-weight: 400;
-  word-spacing: 0.9em; /* размер пробелов */
+  word-spacing: 20px; /* размер пробелов */
   color: white;
   text-transform: uppercase;
   white-space: nowrap; /* чтобы текст не переносился */
