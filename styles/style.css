@@ -126,6 +126,7 @@ article {
   background-size: cover; /* пусть картинка покрывает все пространство */
   background-image: url(../images/cover.jpg); /* задаем картинку для cover */
   background-repeat: no-repeat; /* не повторяем картинку */
+  background-position: center;
   box-sizing: border-box; /* чтобы паддинги не влияли на размер элемента */
   background-color: white;
 }
@@ -198,6 +199,7 @@ article {
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
+
 .link-white {
   color: white;
   text-decoration: none; /* убираем подчеркивание */
@@ -238,17 +240,15 @@ article {
 
 .lots-list {
   /* стили для лотов */
-  display: grid; /* делаем элемент грид-контейнером */
-  grid-template-columns: repeat(
-    3,
-    minmax(334px, 1fr)
-  ); /* колонки с минимальной шириной 334px(см. фигму) */
-  max-width: 1052px;
-  gap: 30px; /* расстояние между лотами(допустим, столько же, сколько в макете(проверить!!!)) */
-  padding: 24px; /* отступы вокруг лотов */
+  display: flex; /* делаем элемент грид-контейнером */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 24px; /* расстояние между лотами(допустим, столько же, сколько в макете(проверить!!!)) */
+  padding: 25px; /* отступы вокруг лотов */
 }
 
-.lots-item-cinema::before {
+.lots-item-cinema::before { /*затемнение*/
   content: "";
   position: absolute;
   top: 0;
@@ -261,6 +261,7 @@ article {
 
 .lots-item-cinema {
   background-image: url(../images/card-lot-01.jpg);
+  max-width: 334px;
   height: 596px; /* высота лота */
   background-size: cover; /* картинка должна покрывать весь элемент */
   background-position: center;
@@ -268,9 +269,9 @@ article {
   position: relative;
   z-index: 1;
 }
-
-.lots-item-book::before {
-  content: "";
+ 
+.lots-item-book::before {  /*затемнение*/
+  content: ""; 
   position: absolute;
   top: 0;
   left: 0;
@@ -283,6 +284,7 @@ article {
 .lots-item-book {
   background-image: url(../images/card-lot-02.jpg);
   height: 596px; /* высота лота */
+  max-width: 334px;
   background-size: cover; /* картинка должна покрывать весь элемент */
   background-repeat: no-repeat; /* не повторяем картинку */
   background-position: center;
@@ -290,7 +292,7 @@ article {
   z-index: 1;
 }
 
-.lots-item-painting::before {
+.lots-item-painting::before { /*затемнение*/
   content: "";
   position: absolute;
   top: 0;
@@ -304,6 +306,7 @@ article {
 .lots-item-painting {
   background-image: url(../images/card-lot-03.jpg);
   height: 596px; /* высота лота */
+  max-width: 334px;
   background-size: cover; /* картинка должна покрывать весь элемент */
   background-repeat: no-repeat; /* не повторяем картинку */
   background-position: center;
@@ -346,7 +349,7 @@ article {
 }
 
 .lots-link {
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 40px;
 }
 
@@ -360,14 +363,16 @@ article {
   display: grid;
   grid-template-columns: 1fr 2fr; /* две колонки с разными габаритами*/
   padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 200px; /* отступ сверху визуально(найти актуальное значение через проверку) */
+  padding-right: 24px; 
+  padding-top: 125px; /* отступ сверху */
   background-color: white;
   font-size: 20px;
   line-height: 24px;
+  gap: 10px;
 }
 
 .background-logo {
+  margin-left: 50px;
   background-color: black;
   width: 240px;
   height: 240px;
@@ -383,6 +388,8 @@ article {
 }
 
 .about-title {
+  margin-top: 115px;
+  margin-bottom: 105px; 
   font-size: 40px;
   line-height: 31px;
   font-weight: 700;
@@ -392,18 +399,20 @@ article {
 
 .about-text {
   max-width: 693px;
-  padding-top: 150px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
+  letter-spacing: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .par-2 {
-  padding-top: 20px; /* примерный отступ, сравнить в пискельперфект */
+  padding-top: 25px; /* примерный отступ, сравнить в пискельперфект */
 }
+
 .footer {
   padding-top: 180px; /* отступ сверху визуально(найти актуальное значение через проверку) */
   padding-bottom: 100px; /* отступ сверху визуально(найти актуальное значение через проверку) */
