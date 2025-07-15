@@ -431,6 +431,16 @@ article {
   align-items: center; /* выравниваем по центру */
 }
 
+.footer-nav {
+  /* стили для навигации в футере */
+  display: flex; /* делаем элемент flex-контейнером */
+  flex-direction: column; /* выстраиваем элементы в столбик */
+  text-align: center;
+  align-items: center;
+  line-height: 18px;
+  padding-bottom: 40px;
+}
+
 .footer-address {
   /* стили для адреса в футере */
   padding-left: 50px; /* отступ слева */
@@ -440,18 +450,9 @@ article {
   white-space: nowrap;
 }
 
-.footer-nav {
-  /* стили для навигации в футере */
-  padding-top: 40px;
-  display: flex; /* делаем элемент flex-контейнером */
-  flex-direction: column; /* выстраиваем элементы в столбик */
-  text-align: center;
-  align-items: center;
-  line-height: 18px;
-}
-
 .socials {
   /* стили для социальных сетей */
+  padding-bottom: 50px;
   display: grid; /* делаем элемент грид-контейнером */
   grid-template-columns: repeat(3, 1fr); /* три колонки */
 }
