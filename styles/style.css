@@ -270,8 +270,8 @@ article {
   z-index: 1;
 }
  
-.lots-item-book::before {  /*затемнение*/
-  content: ""; 
+.lots-item-book::before { /*затемнение*/
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -361,14 +361,14 @@ article {
 .about {
   margin: 0 auto; /* выравниваем по центру */
   display: grid;
-  grid-template-columns: 1fr 2fr; /* две колонки с разными габаритами*/
+  grid-template-columns: 240px 1fr; /* две колонки с разными габаритами(фиксировано для картинки, остальное на макс)*/
+  align-items: start;
   padding-left: 24px;
-  padding-right: 24px; 
+  padding-right: 24px;
   padding-top: 125px; /* отступ сверху */
   background-color: white;
   font-size: 20px;
   line-height: 24px;
-  gap: 10px;
 }
 
 .background-logo {
@@ -389,7 +389,9 @@ article {
 
 .about-title {
   margin-top: 115px;
-  margin-bottom: 105px; 
+  margin-bottom: 105px;
+  margin-left: 110px;
+  padding-left: 10px;
   font-size: 40px;
   line-height: 31px;
   font-weight: 700;
@@ -398,6 +400,8 @@ article {
 }
 
 .about-text {
+  margin-left: 120px;
+  margin-right: 24px;
   max-width: 693px;
   font-size: 20px;
   line-height: 24px;
