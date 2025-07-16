@@ -1,2 +1,1 @@
-ОЗУМИИГУИЖИМО
-?ЩЕ?ЕЗАУМУХН
+https://github.com/kast20001/ono-tebe-nado-fd
