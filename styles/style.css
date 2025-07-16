@@ -453,8 +453,10 @@ article {
 .socials {
   /* стили для социальных сетей */
   padding-bottom: 50px;
+  padding-left: 80px;
   display: grid; /* делаем элемент грид-контейнером */
   grid-template-columns: repeat(3, 1fr); /* три колонки */
+  gap: 30px;
 }
 
 .socials-img {
