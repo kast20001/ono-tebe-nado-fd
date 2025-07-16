@@ -21,7 +21,6 @@ article {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   justify-items: center;
-  max-width: 1100px; /* задаем максимальную ширину */
   min-height: 293px;
   background-color: white;
   font-size: 18px;
@@ -75,7 +74,6 @@ article {
   padding-left: 70px;
   font-size: 18px;
   font-style: normal;
-  display: block;
   align-items: flex-start;
   max-width: 240px;
   line-height: 24px;
@@ -85,18 +83,15 @@ article {
   text-underline-offset: 4px;
 }
 
-.address-address { /*сохраняем форматирование из HTML(поискать замену свойству потом)*/
+.address-address {
+  /*сохраняем форматирование из HTML(поискать замену свойству потом)*/
   white-space: pre;
 }
 
 .no-deco {
   /* для строк, в которых не нужны точки и прочие метки*/
   list-style-type: none;
-  padding: 0; /* убираем стандартные отступы */
-  margin: 0 auto;
-
 }
-
 
 .cover::before {
   /*этот класс дался с ОЧЕНЬ большой болью*/
@@ -153,10 +148,10 @@ article {
   display: block;
 }
 
-.padding-tebe { /*надо как-то альтернативу придумать, а то как на коленках настраивать*/
+.padding-tebe {
+  /*надо как-то альтернативу придумать, а то как на коленках настраивать*/
   padding-top: 20px;
   padding-left: 30px;
-
 }
 
 .padding-nado {
@@ -199,7 +194,6 @@ article {
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
-
 .link-white {
   color: white;
   text-decoration: none; /* убираем подчеркивание */
@@ -234,12 +228,12 @@ article {
 
 .lots {
   /* стили для лотов */
-  background-color: white;
+  background-color: white; /* иначе фон принимает цвет задника */
   z-index: 1;
 }
 
 .lots-list {
-  /* стили для лотов */
+  /* стили для списка лотов */
   display: flex; /* делаем элемент грид-контейнером */
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -248,7 +242,8 @@ article {
   padding: 25px; /* отступы вокруг лотов */
 }
 
-.lots-item-cinema::before { /*затемнение*/
+.lots-item-cinema::before {
+  /*затемнение*/
   content: "";
   position: absolute;
   top: 0;
@@ -269,8 +264,9 @@ article {
   position: relative;
   z-index: 1;
 }
- 
-.lots-item-book::before { /*затемнение*/
+
+.lots-item-book::before {
+  /*затемнение*/
   content: "";
   position: absolute;
   top: 0;
@@ -292,7 +288,8 @@ article {
   z-index: 1;
 }
 
-.lots-item-painting::before { /*затемнение*/
+.lots-item-painting::before {
+  /*затемнение*/
   content: "";
   position: absolute;
   top: 0;
@@ -315,6 +312,7 @@ article {
 }
 
 .lots-title {
+  /* название блока */
   padding-top: 185px;
   padding-left: 65px;
   font-size: 40px;
@@ -323,6 +321,7 @@ article {
 }
 
 .lots-description-h {
+  /* заголовок описания лота */
   color: white;
   font-size: 22px;
   font-weight: 700;
@@ -336,7 +335,8 @@ article {
 }
 
 .lots-description {
-  position: absolute;
+  /* описание лота */
+  position: absolute; /* чтобы текст правильно стоял */
   bottom: 0;
   color: white;
   font-size: 20px;
@@ -349,6 +349,7 @@ article {
 }
 
 .lots-link {
+  /* ссылка в секторе лотов */
   padding-top: 10px;
   padding-left: 40px;
 }
@@ -388,6 +389,7 @@ article {
 }
 
 .about-title {
+  /* заголовок параграфа "Об аукционе" */
   margin-top: 115px;
   margin-bottom: 105px;
   margin-left: 110px;
@@ -400,6 +402,7 @@ article {
 }
 
 .about-text {
+  /* текст параграфа "Об аукционе" */
   margin-left: 120px;
   margin-right: 5px;
   max-width: 693px;
@@ -414,7 +417,7 @@ article {
 }
 
 .par-2 {
-  padding-top: 25px; /* примерный отступ, сравнить в пискельперфект */
+  padding-top: 25px; /* отступы между параграфами */
 }
 
 .footer {
@@ -434,11 +437,14 @@ article {
 .footer-nav {
   /* стили для навигации в футере */
   display: flex; /* делаем элемент flex-контейнером */
-  flex-direction: column; /* выстраиваем элементы в столбик */
+  justify-content: center;
   text-align: center;
-  align-items: center;
   line-height: 18px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
+}
+
+.footer-nav-li {
+  margin-top: 5px; /* создаем пробел между пунктами, gap не сработал*/
 }
 
 .footer-address {
@@ -456,7 +462,7 @@ article {
   padding-left: 80px;
   display: grid; /* делаем элемент грид-контейнером */
   grid-template-columns: repeat(3, 1fr); /* три колонки */
-  gap: 30px;
+  gap: 0px; /*пробел между иконками*/
 }
 
 .socials-img {
