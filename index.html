@@ -46,17 +46,27 @@
       <address class="address">
         <!-- контактная информация -->
         <ul class="no-deco">
-          <li><a class='address-phone' href="tel:+9-999-555-5555">+9 999 555 5555</a></li>
+          <li>
+            <a class="underline-offset" href="tel:+9-999-555-5555"
+              >+9 999 555 5555</a
+            >
+          </li>
           <!-- псевдо-ссылки контактной информации-->
-          <li><a class='address-phone' href="mailto:info@sobaka.ge">info@sobaka.ge</a></li>
-          <li class="address-text">наб. Принсенграхт 263-  <!--это ужасно, но иначе не вышло...-->
-265, Амстердам</li>
+          <li>
+            <a class="underline-offset" href="mailto:info@sobaka.ge"
+              >info@sobaka.ge</a
+            >
+          </li>
+          <!--это ужасно, но иначе не вышло...-->
+          <li class="address-text">наб. Принсенграхт 263- 
+265, Амстердам </li>
         </ul>
       </address>
     </header>
 
     <main>
-      <div class="cover">
+      <section class="cover">
+        <div class="overlay"></div>
         <!-- обертка для основной информации со страницы -->
         <div class="cover-box">
           <h1 class="cover-title">
@@ -76,9 +86,9 @@
           <p class="cover-description">
             Аукцион вещей, в которые никто не верил
           </p>
-          <button class="button-bet">Сделать ставку</button>
+          <button type="button" class="button-bet">Сделать ставку</button>
         </div>
-      </div>
+      </section>
 
       <section class="lots">
         <!-- лоты -->
@@ -86,48 +96,62 @@
         <h2 class="lots-title">Лоты</h2>
 
         <div class="lots-list">
+          
           <!-- статья один -->
-          <article class="lots-item-cinema">
-            <h3 class="lots-description-h">
-              Фильм режиссёра, который бросил киношколу
-            </h3>
-            <p class="lots-description">
-              Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-              ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
-            </p>
-          </article>
+          <a href="/film-lot">
+            
+            <article class="lots-item-cinema">
+              <div class="overlay"></div>
+              <h3 class="lots-description-lead">
+                Фильм режиссёра, который бросил киношколу
+              </h3>
+              <p class="lots-description">
+                Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
+                ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
+              </p>
+            </article>
+          </a>
           <!-- статья два -->
-          <article class="lots-item-book">
-            <h3 class="lots-description-h">
-              Книга, где описан один скучный день из жизни рекламного агента
-            </h3>
-            <p class="lots-description">
-              Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
-              переходами на древнеанглийский. В ней одновременно рассказывается
-              о 16 июня 1904 года и об истории литературы, начиная с античных
-              времён. И это всё накладывается на эпическую поэму Гомера. Сколько
-              бы вы поставили на «Улисса» Джеймса Джойса?
-            </p>
-          </article>
+
+          <a href="/book-lot">
+            <article class="lots-item-book">
+              <div class="overlay"></div>
+              <h3 class="lots-description-lead">
+                Книга, где описан один скучный день из жизни рекламного агента
+              </h3>
+              <p class="lots-description">
+                Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
+                переходами на древнеанглийский. В ней одновременно
+                рассказывается о 16 июня 1904 года и об истории литературы,
+                начиная с античных времён. И это всё накладывается на эпическую
+                поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса
+                Джойса?
+              </p>
+            </article>
+          </a>
           <!-- статья три -->
-          <article class="lots-item-painting">
-            <h3 class="lots-description-h">
-              Картина, которую повторит даже 5-летний сын маминой подруги
-            </h3>
-            <p class="lots-description">
-              Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то
-              похожее на инфузорию-туфельку. Никаких полей, лесов, котиков...
-              Сколько бы вы на такое поставили, если бы не знали, что это — одна
-              из революционных работ Кандинского?
-            </p>
-          </article>
+          <a href="/painting-lot">
+            <article class="lots-item-painting">
+              <div class="overlay"></div>
+              <h3 class="lots-description-lead">
+                Картина, которую повторит даже 5-летний сын маминой подруги
+              </h3>
+              <p class="lots-description">
+                Ну действительно, там линия, тут кружочек, а здесь и вовсе
+                что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
+                котиков... Сколько бы вы на такое поставили, если бы не знали,
+                что это — одна из революционных работ Кандинского?
+              </p>
+            </article>
+          </a>
+
           <a class="bigger-font-size-link lots-link" href="#0"
             >посмотреть больше</a
           >
         </div>
       </section>
 
-      <div class="about">
+      <section class="about">
         <div class="background-logo">
           <img
             class="white-logo"
@@ -135,7 +159,7 @@
             alt="Логотип белый"
           />
         </div>
-        <section class="about-description">
+        <div class="about-description">
           <h2 class="about-title">Об аукционе</h2>
           <div class="about-text">
             <p>
@@ -145,7 +169,7 @@
               или картина, которую может нарисовать даже ребёнок? Кому нужны все
               эти странные вещи, созданные любителями?
             </p>
-            <p class="par-2">
+            <p>
               Слишком сложные или, наоборот, слишком простые. Опережающие своё
               время. В пух и прах растерзанные критиками. Непринятые и
               непонятые. Когда-то они казались просто неудачными. Но, несмотря
@@ -155,8 +179,8 @@
               лоты стали культовыми.
             </p>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <!-- основная информация со страницы -->
 
@@ -165,13 +189,13 @@
         <!-- контактная информация -->
         <ul class="no-deco">
           <li>
-            <a class="address-phone" href="tel:+9-999-555-5555"
+            <a class="underline-offset" href="tel:+9-999-555-5555"
               >+9 999 555 5555</a
             >
           </li>
           <!-- псевдо-ссылки контактной информации-->
           <li>
-            <a class="address-phone" href="mailto:info@sobaka.ge"
+            <a class="underline-offset" href="mailto:info@sobaka.ge"
               >info@sobaka.ge</a
             >
           </li>
@@ -186,19 +210,29 @@
           <li class="nav-non-active-link">
             <a class="link-nav" href="/">главная</a>
           </li>
-          <li class="footer-nav-li"><a href="/lots">посмотреть лоты</a></li>
-          <li class="footer-nav-li"><a href="/about">об аукционе</a></li>
+          <li class="margin-top"><a href="/lots">посмотреть лоты</a></li>
+          <li class="margin-top"><a href="/about">об аукционе</a></li>
         </ul>
       </nav>
 
       <div class="socials">
-        <img class="socials-img" src="./images/yt.svg" alt="иконка YouTube" />
-        <img class="socials-img" src="./images/vk.svg" alt="иконка ВКонтакте" />
-        <img
-          class="socials-img"
-          src="./images/pinterest.svg"
-          alt="иконка Pinterest"
-        />
+        <a href="/YouTube">
+          <img class="socials-img" src="./images/yt.svg" alt="иконка YouTube" />
+        </a>
+        <a href="/VK">
+          <img
+            class="socials-img"
+            src="./images/vk.svg"
+            alt="иконка ВКонтакте"
+          />
+        </a>
+        <a href="/Pinterest">
+          <img
+            class="socials-img"
+            src="./images/pinterest.svg"
+            alt="иконка Pinterest"
+          />
+        </a>
       </div>
     </footer>
     <!-- подвал сайта -->
