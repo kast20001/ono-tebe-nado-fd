@@ -69,7 +69,7 @@ article {
   width: 148px;
 }
 
-.header-address {
+.address {
   /*задаем положение адрессам*/
   padding-left: 70px;
   font-size: 18px;
@@ -83,7 +83,7 @@ article {
   text-underline-offset: 4px;
 }
 
-.address-address {
+.address-text {
   /*сохраняем форматирование из HTML(поискать замену свойству потом)*/
   white-space: pre;
 }
@@ -199,7 +199,7 @@ article {
   text-decoration: none; /* убираем подчеркивание */
 }
 
-.link-black {
+.link-nav {
   color: black;
   text-decoration: none; /* убираем подчеркивание */
 }
@@ -447,13 +447,11 @@ article {
   margin-top: 5px; /* создаем пробел между пунктами, gap не сработал*/
 }
 
-.footer-address {
+.address-position-footer {
   /* стили для адреса в футере */
   padding-left: 50px; /* отступ слева */
   padding-bottom: 5px;
   max-width: 261px;
-  font-style: normal; /*убираем курсив*/
-  line-height: 24px;
   white-space: nowrap;
 }
 
