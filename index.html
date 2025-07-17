@@ -21,13 +21,13 @@
         <!-- навигация по сайту -->
         <ul class="nav-list">
           <li>
-            <a class="link-nav nav-non-active-link" href="/">главная</a>
+            <a class="no-deco-link" href="/">главная</a>
           </li>
-          <li>
-            <a class="link-nav nav-link-active" href="/lots">посмотреть лоты</a>
+          <li class="list-deco">
+            <a class="link-active" href="/lots">посмотреть лоты</a>
           </li>
-          <li>
-            <a class="link-nav nav-link-active" href="/about">об аукционе</a>
+          <li class="list-deco">
+            <a class="link-active" href="/about">об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -98,9 +98,8 @@
         <div class="lots-list">
           
           <!-- статья один -->
-          <a href="/film-lot">
-            
-            <article class="lots-item-cinema">
+          <a class="no-deco-link" href="/film-lot">
+            <article class="lots-item lots-item-cinema">
               <div class="overlay"></div>
               <h3 class="lots-description-lead">
                 Фильм режиссёра, который бросил киношколу
@@ -113,8 +112,8 @@
           </a>
           <!-- статья два -->
 
-          <a href="/book-lot">
-            <article class="lots-item-book">
+          <a class="no-deco-link" href="/book-lot">
+            <article class="lots-item lots-item-book">
               <div class="overlay"></div>
               <h3 class="lots-description-lead">
                 Книга, где описан один скучный день из жизни рекламного агента
@@ -130,8 +129,8 @@
             </article>
           </a>
           <!-- статья три -->
-          <a href="/painting-lot">
-            <article class="lots-item-painting">
+          <a class="no-deco-link" href="/painting-lot">
+            <article class="lots-item lots-item-painting">
               <div class="overlay"></div>
               <h3 class="lots-description-lead">
                 Картина, которую повторит даже 5-летний сын маминой подруги
@@ -154,7 +153,7 @@
       <section class="about">
         <div class="background-logo">
           <img
-            class="white-logo"
+            class="about-logo"
             src="./images/logo-white.svg"
             alt="Логотип белый"
           />
@@ -207,8 +206,8 @@
       <nav class="footer-nav">
         <!-- навигация по сайту -->
         <ul class="no-deco">
-          <li class="nav-non-active-link">
-            <a class="link-nav" href="/">главная</a>
+          <li>
+            <a class="no-deco-link" href="/">главная</a>
           </li>
           <li class="margin-top"><a href="/lots">посмотреть лоты</a></li>
           <li class="margin-top"><a href="/about">об аукционе</a></li>
