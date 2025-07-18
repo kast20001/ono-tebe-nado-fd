@@ -48,7 +48,7 @@ article {
   text-align: center;
 }
 
-.link-active { /*!ПОДУМАТЬ надо ли сотавлять, если у ссылок цвет в начале задается!(надо)*/
+.link-active { /*!ПОДУМАТЬ надо ли сотавлять, если у ссылок цвет в начале задается!(надо, т.к. основной стиль ссылок можно менять)*/
   /* наименование ссылки исправлено */
   color: black;
 }
@@ -283,7 +283,7 @@ article {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 48px;
-  margin-bottom: auto; /* хитро выталкиваем текст вниз без абсолютного позиционирования */
+  margin-bottom: auto; /* хитро выталкиваем текст вниз без абсолютного позиционирования :) */
   text-decoration: underline;
   text-transform: uppercase;
   position: relative;
