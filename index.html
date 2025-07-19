@@ -21,13 +21,14 @@
         <!-- навигация по сайту -->
         <ul class="nav-list">
           <li>
-            <a class="nav-link-header no-deco-link" href="/">главная</a>
+            <!-- линки исправлены -->
+            <a class="nav-link-header link-active no-deco-link" href="/">главная</a>
           </li>
           <li class="list-deco">
-            <a class="nav-link-header link-active" href="/lots">посмотреть лоты</a>
+            <a class="nav-link-header" href="/lots">посмотреть лоты</a>
           </li>
           <li class="list-deco">
-            <a class="nav-link-header link-active" href="/about">об аукционе</a>
+            <a class="nav-link-header" href="/about">об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -73,16 +74,16 @@
             <!-- заголовок страницы -->
             <span class="cover-title-align cover-title-align-start">Оно </span>
             <span
-              class="cover-title-align cover-title-align-center padding-tebe"
+              class="cover-title-align cover-title-align-center"
               >тебе</span
             >
-            <span class="cover-title-align cover-title-align-end padding-nado">
+            <span class="cover-title-align cover-title-align-end">
               надо</span
             >
           </h1>
         </div>
 
-        <div class="cover-one-row">
+        <div class="cover-text">
           <p class="cover-description">
             Аукцион вещей, в которые никто не верил
           </p>
@@ -143,10 +144,11 @@
               </p>
             </article>
           </a>
-
-          <a class="bigger-font-size-link lots-link" href="#0"
-            >посмотреть больше</a
-          >
+        </div>
+        <div class="lots-link-div">
+        <!-- закидываем ссылку коробку, чтобы вне зависимости от кол-ва карточек ссылка была внизу(примитивно, но работает!) -->
+            <a class="bigger-font-size-link lots-link underline-offset" href="#0"
+              >посмотреть больше</a>
         </div>
       </section>
 

@@ -34,6 +34,7 @@ article {
   /*список для навигации*/
   list-style-type: none;
   padding-left: 50px;
+  padding-bottom: 5px;
   margin: 0;
   display: flex; /* делаем элемент flex-контейнером */
   gap: 32px;
@@ -84,6 +85,7 @@ article {
 .address {
   /*задаем положение адрессам*/
   padding-left: 70px;
+  padding-bottom: 5px; /*немного выравниваем, чтобы ближе к макету было*/
   font-size: 18px;
   font-style: normal;
   align-items: flex-start;
@@ -157,17 +159,6 @@ article {
   display: block;
 }
 
-.padding-tebe {
-  /*надо как-то альтернативу придумать, а то как на коленках настраивать*/
-  padding-top: 20px;
-  padding-left: 30px;
-}
-
-.padding-nado {
-  padding-top: 20px;
-  padding-left: 612px;
-}
-
 .cover-title-align-start {
   /* в начало */
   text-align: start;
@@ -176,14 +167,18 @@ article {
 .cover-title-align-center {
   /* по центру */
   text-align: center;
+  padding-top: 20px;
+  padding-left: 30px;
 }
 
 .cover-title-align-end {
   /* в конец */
   text-align: end;
+  padding-top: 20px;
+  padding-left: 612px;
 }
 
-.cover-one-row {
+.cover-text {
   display: flex; /* делаем элемент flex-контейнером */
   flex-direction: row; /* выстраиваем элементы в строку */
   justify-content: space-between;
@@ -244,6 +239,7 @@ article {
 .lots-item {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   max-width: 334px;
   min-height: 596px; /* высота лота */
   background-size: cover; /* картинка должна покрывать весь элемент */
@@ -264,6 +260,7 @@ article {
 .lots-item-painting {
   background-image: url(../images/card-lot-03.jpg);
 }
+
 
 .lots-title {
   /* название блока */
@@ -303,10 +300,16 @@ article {
   z-index: 2; /* помещаем текст поверх псевдоэлемента */
 }
 
+.lots-link-div {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
 .lots-link {
   /* ссылка в секторе лотов */
   padding-top: 10px;
-  padding-left: 40px;
+  padding-left: 45px;
 }
 
 .lots-item-img {
@@ -328,6 +331,7 @@ article {
 }
 
 .background-logo {
+  margin-top: 5px;
   margin-left: 50px;
   background-color: black;
   width: 240px;
@@ -360,6 +364,7 @@ article {
   /* текст параграфа "Об аукционе" */
   margin-left: 120px;
   margin-right: 5px;
+  padding-top: 5px;
   max-width: 693px;
   font-size: 20px;
   line-height: 24px;
@@ -369,7 +374,7 @@ article {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 25px;
+  gap: 22px;
 }
 
 .footer {
@@ -392,10 +397,11 @@ article {
   text-align: center;
   line-height: 18px;
   padding-bottom: 38px;
+  padding-top: 5px;
 }
 
 .margin-top {
-  margin-top: 5px; /* создаем пробел между пунктами, gap не сработал*/
+  margin-top: 3px; /* создаем пробел между пунктами, gap не сработал*/
 }
 
 .address-position-footer {
